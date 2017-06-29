@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'tomasr/molokai'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plug 'scrooloose/nerdtree'
