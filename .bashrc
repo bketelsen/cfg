@@ -105,6 +105,13 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_exports]; then
+    . ~/.bash_exports
+fi
+if [ -f ~/.bash_functions]; then
+    . ~/.bash_functions
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -116,8 +123,5 @@ if ! shopt -oq posix; then
   fi
 fi
 umask 022
-export PATH=~/bin:$PATH:/usr/local/go/bin
-export GOPATH=~
 
 eval "$(vg eval --shell bash)"
-alias config='/usr/bin/git --git-dir=/home/bketelsen/.cfg/ --work-tree=/home/bketelsen'
