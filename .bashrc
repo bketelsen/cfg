@@ -125,3 +125,4 @@ fi
 umask 022
 
 eval "$(vg eval --shell bash)"
+bin/st
