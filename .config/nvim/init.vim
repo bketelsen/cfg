@@ -27,7 +27,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plug 'L9'
+"Plug 'L9'
 Plug 'osyo-manga/vim-over'
 Plug 'scrooloose/syntastic'
 
