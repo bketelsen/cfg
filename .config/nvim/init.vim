@@ -43,11 +43,11 @@ Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
-Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else
@@ -168,7 +168,8 @@ if !exists('g:not_finish_vimplug')
   colorscheme molokai
 endif
 
-set mousemodel=popup
+"set mousemodel=popup
+set mouse=a
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
@@ -414,6 +415,17 @@ let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
+
+
+"----------------------------------------------
+" Plugin: w0rp/ale
+"----------------------------------------------
+" Error and warning signs.
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
