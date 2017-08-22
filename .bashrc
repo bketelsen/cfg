@@ -124,7 +124,4 @@ if ! shopt -oq posix; then
 fi
 umask 022
 
-eval "$(vg eval --shell bash)"
-bin/st
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
