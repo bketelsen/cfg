@@ -124,11 +124,22 @@ if ! shopt -oq posix; then
 fi
 umask 022
 
-eval "$(vg eval --shell bash)"
-bin/st
+# eval "$(vg eval --shell bash)"
+# bin/st
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-export PATH=$PATH:/Users/bketelsen/bin
+export PATH=$PATH:/home/bketelsen/bin
 
-source '/Users/bketelsen/lib/azure-cli/az.completion'
+source '/home/bketelsen/lib/azure-cli/az.completion'
+
+
+
+function _update_ps1() {
+    PS1="$(~/.powerline/powerline-go -error $?)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
