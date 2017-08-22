@@ -125,3 +125,7 @@ fi
 umask 022
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export PATH=$PATH:/Users/bketelsen/bin
+
+source '/Users/bketelsen/lib/azure-cli/az.completion'
