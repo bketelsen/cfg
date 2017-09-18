@@ -1,6 +1,5 @@
-export GOPATH=~
+export GOPATH=/mnt/c/projects
 export PATH=$GOPATH/bin:/usr/local/go/bin:/usr/local/bin:$PATH
 export EDITOR=nvim
 export BROWSER=/usr/bin/google-chrome
 
-export PATH="$HOME/.cargo/bin:$PATH"

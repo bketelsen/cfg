@@ -72,17 +72,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
@@ -128,15 +117,15 @@ umask 022
 
 export PATH=$PATH:/home/bketelsen/bin
 
-source '/home/bketelsen/lib/azure-cli/az.completion'
+#source '/home/bketelsen/lib/azure-cli/az.completion'
 
 
 
-function _update_ps1() {
-    PS1="$(~/.powerline/powerline-go -error $?)"
-}
+#function _update_ps1() {
+#    PS1="$(~/.powerline/powerline-go -error $?)"
+#}
 
-if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-
+#if [ "$TERM" != "linux" ]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
+export LS_OPTIONS='--color-auto'
