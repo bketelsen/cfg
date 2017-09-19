@@ -129,3 +129,4 @@ export PATH=$PATH:/home/bketelsen/bin
 #    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 #fi
 export LS_OPTIONS='--color-auto'
+export DISPLAY=:0

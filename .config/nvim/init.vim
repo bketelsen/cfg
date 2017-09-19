@@ -77,7 +77,7 @@ endif
 Plug 'honza/vim-snippets'
 
 "" Color
-Plug 'tomasr/molokai'
+"Plug 'tomasr/molokai'
 
 Plug 'jodosha/vim-godebug'
 Plug 'Shougo/deoplete.nvim' ", { 'do': ':UpdateRemotePlugins' }
@@ -166,7 +166,7 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  colorscheme molokai
+  "colorscheme molokai
 endif
 
 "set mousemodel=popup
@@ -221,7 +221,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+"let g:airline_theme = 'powerlineish'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
