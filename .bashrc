@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -111,14 +111,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-umask 022
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export PATH=/home/bketelsen/bin:/usr/local/bin:$PATH
 #source '/home/bketelsen/lib/azure-cli/az.completion'
 
-
+eval "$(direnv hook bash)"
 
 #function _update_ps1() {
 #    PS1="$(~/.powerline/powerline-go -error $?)"
@@ -128,4 +127,7 @@ export PATH=/home/bketelsen/bin:/usr/local/bin:$PATH
 #    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 #fi
 export LS_OPTIONS='--color-auto'
-export DISPLAY=:0
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -25,13 +25,15 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-alias github="cd /Users/bketelsen/src/github.com"
-alias bketelsen="cd /Users/bketelsen/src/github.com/bketelsen"
-alias gophercon="cd /Users/bketelsen/src/github.com/gophercon"
-alias gopheracademy="cd /Users/bketelsen/src/github.com/gopheracademy"
+alias github="cd /home/bketelsen/src/github.com"
+alias talks="cd /home/bketelsen/src/github.com/bketelsen/talks"
+alias learngo="cd /home/bketelsen/src/github.com/thewondertwins/learngo"
+alias bketelsen="cd /home/bketelsen/src/github.com/bketelsen"
+alias gophercon="cd /home/bketelsen/src/github.com/gophercon"
+alias gopheracademy="cd /home/bketelsen/src/github.com/gopheracademy"
 alias tmux="tmux -2"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias nvim='/usr/local/bin/vim'
-alias vim='/usr/local/bin/vim'
-alias vi='/usr/local/bin/vim'
+alias nvim='/usr/bin/nvim'
+alias vim='/usr/bin/nvim'
+alias vi='/usr/bin/nvim'
