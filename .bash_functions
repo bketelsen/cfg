@@ -492,3 +492,38 @@ xname(){
 		-e "\${g; p}"
 }
 
+updateall() {
+    find . -name ".git" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull
+}
+
+
+cdat() {
+    cda $2 --channel=twitter --alias=brketels --event=$1
+}
+
+cdal() {
+    cda $2 --channel=linkedin --alias=brketels --event=$1
+}
+
+cdaf() {
+    cda $2 --channel=facebook --alias=brketels --event=$1
+}
+
+gh() {
+  if [[ $# -ne 2 ]]; then
+    echo "USAGE: gh [user] [repo]"
+    return
+  fi
+
+  GOPATH=${GOPATH:-$HOME/go}
+  user_path=$GOPATH/src/github.com/$1
+  local_path=$user_path/$2
+
+  if [[ ! -d $local_path ]]; then
+    git clone git@github.com:$1/$2.git $local_path
+  fi
+
+  if [[ -d $local_path ]]; then
+    cd $local_path
+  fi
+}
