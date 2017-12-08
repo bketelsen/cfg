@@ -101,6 +101,9 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
+
+eval "$(direnv hook bash)"
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -121,12 +124,16 @@ export PATH=$PATH:/home/bketelsen/bin
 
 
 
-#function _update_ps1() {
-#    PS1="$(~/.powerline/powerline-go -error $?)"
-#}
+function _update_ps1() {
+    PS1="$(~/bin/powerline-go -error $?)"
+}
 
-#if [ "$TERM" != "linux" ]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 export LS_OPTIONS='--color-auto'
 export DISPLAY=:0
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
